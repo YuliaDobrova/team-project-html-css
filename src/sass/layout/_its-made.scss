@@ -1,0 +1,107 @@
+.its-made {
+    padding-top: 139px;
+
+    @media screen and (max-width: 480px){
+
+        background-image: url(../images/its_made/section-bg1200.png);   
+        background-repeat: no-repeat;
+        background-size: 320px 133px;
+        background-position: center bottom;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 1280px) {
+        background-image: url(../images/its_made/section-bg1200.png);   
+        background-repeat: no-repeat;
+        background-size: 1280px 534px;
+        background-position: center bottom;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section-color {
+    background-color: var(--secondary-background-color);
+}
+
+.its-made__sub-box {  
+    @media screen and (max-width: 767px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 50px;
+        padding-left: 17px;
+        padding-right: 50px;        
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 51px;
+        padding-left: 74px;
+        padding-right: 117px;
+    }
+}
+
+.its-made__box-img{
+    margin-bottom: 46px;
+    width: 100%;
+    max-width: 280px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 340px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        max-width: 516px;
+    }
+}
+
+.its-made__text {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+    color: var(--black);
+    margin-bottom: 46px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.78;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+}
+
+.its-made__text2 {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+    color: var(--grey);
+    margin-bottom: 46px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.78;
+    }
+}
+
+
+.its-made__box {    
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+    
+    @media screen and (min-width: 1280px) {
+        // margin-left: 85px;
+    }
+}
+  
+
