@@ -12,9 +12,9 @@
   }
 
   &__content-container {
-    width: calc(100% - 40px);
-    position: absolute;
-    z-index: 3;
+    width: calc(100% - 20px);
+    position: relative;
+    z-index: 6;
   }
 
   &__container-first {
@@ -30,7 +30,7 @@
     display: inline-block;
     margin-bottom: 25px;
 
-    font-family: Titan One;
+    font-family: Titan One, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
@@ -57,9 +57,11 @@
     font-style: normal;
     font-weight: 400;
     font-size: 8px;
-    line-height: 1.3px;
+    line-height: 1.3;
 
     border-radius: 30px;
+
+    cursor: pointer;
 
     & + & {
       margin-left: 8px;
@@ -104,34 +106,37 @@
 
     &__ad-container {
       position: relative;
+
       display: flex;
       flex-direction: column;
+      margin-right: 8px;
       text-align: right;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -4px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        background-color: var(--white);
+        border-radius: 50%;
+        text-align: right;
+      }
 
       & + & {
         margin-top: 13px;
       }
     }
 
-    &__ad-circle {
-      position: absolute;
-      top: -4px;
-      right: -8px;
-      width: 16px;
-      height: 16px;
-      background-color: var(--white);
-      border-radius: 50%;
-      text-align: right;
-    }
-
     &__number {
       color: var(--accent-color);
-      font-family: Titan One;
+      font-family: Titan One, sans-serif;
       font-style: normal;
       font-size: 28px;
       line-height: 1.14;
       text-transform: uppercase;
-      z-index: 4;
+      z-index: 7;
     }
 
     &__cafes {
@@ -148,6 +153,29 @@
 
     &__milk-describe {
       display: flex;
+    }
+
+    &__milk-container {
+      width: 124px;
+      height: 126px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../images/hero-header/hero-milk-tablet.png');
+      }
+    }
+
+    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+      (min-resolution: 192dpi) and (min-width: 768px),
+      (min-resolution: 2dppx) and (min-width: 768px) {
+      &__milk-container::after {
+        background-image: url('../images/hero-header/hero-milk-tablet@2x.png');
+      }
     }
 
     &__describe-container {
@@ -176,6 +204,7 @@
       border-radius: 50%;
       border: none;
       background-color: var(--white);
+      cursor: pointer;
 
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -193,8 +222,8 @@
 
       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-      .describe-button:hover &,
-      .describe-button:focus & {
+      .hero__describe-button:hover &,
+      .hero__describe-button:focus & {
         fill: var(--white);
       }
     }
@@ -202,16 +231,29 @@
     &__girl-container {
       width: 168px;
       position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/hero-header/hero-girl-tablet.png');
+      }
     }
 
-    &__girl {
-      position: absolute;
-      bottom: -19px;
-    }
+    // @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+    //   (min-resolution: 192dpi) and (min-width: 768px),
+    //   (min-resolution: 2dppx) and (min-width: 768px) {
+    //   &__girl-container::after {
+    //     background-image: url('../images/hero-header/hero-girl-tablet@2x.png');
+    //   }
+    // }
 
     &__ice-cream-container {
       top: -52px;
-      right: 114px;
+      right: 124px;
     }
 
     &__ice-cream-background {
@@ -233,7 +275,7 @@
 
   @media screen and (min-width: 1280px) {
     height: 665px;
-    padding-bottom: 170px;
+    padding-top: 170px;
 
     &__container-first {
       margin-bottom: 8px;
@@ -274,17 +316,20 @@
     }
 
     &__ad-container {
+      margin-right: 16px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: -17px;
+        width: 30px;
+        height: 30px;
+      }
+
       & + & {
         margin-top: 15px;
       }
-    }
-
-    &__ad-circle {
-      position: absolute;
-      top: -5px;
-      right: -17px;
-      width: 30px;
-      height: 30px;
     }
 
     &__number {
@@ -295,6 +340,25 @@
     &__cafes {
       font-size: 14px;
       line-height: 1.3;
+    }
+
+    &__milk-container {
+      width: 188px;
+      height: 191px;
+
+      &::after {
+        content: '';
+        display: block;
+        background-image: url('../images/hero-header/hero-milk-desktop.png');
+      }
+    }
+
+    @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
+      (min-resolution: 192dpi) and (min-width: 1280px),
+      (min-resolution: 2dppx) and (min-width: 1280px) {
+      &__milk-container::after {
+        background-image: url('../images/hero-header/hero-milk-desktop@2x.png');
+      }
     }
 
     &__describe-container {
@@ -320,17 +384,32 @@
 
     &__girl-container {
       width: 294px;
+      height: 236px;
       position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -26px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/hero-header/hero-girl-desktop.png');
+        background-repeat: no-repeat;
+      }
     }
 
-    &__girl {
-      position: absolute;
-      bottom: -45px;
-    }
+    // @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
+    //   (min-resolution: 192dpi) and (min-width: 1280px),
+    //   (min-resolution: 2dppx) and (min-width: 1280px) {
+    //   &__girl-container::after {
+    //     background-image: url('../images/hero-header/hero-girl-desktop@2x.png');
+    //   }
+    // }
 
     &__ice-cream-container {
-      top: -140px;
-      right: 162px;
+      top: -118px;
+      right: 172px;
     }
 
     &__ice-cream-background {

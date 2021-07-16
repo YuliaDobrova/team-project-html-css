@@ -7,10 +7,12 @@
 
 @import './components/backdrop';
 @import './components/button';
+@import './components/order';
 @import './components/menu';
 @import './components/social-list';
 @import './components/title';
 @import './components/subtittle';
+@import './components/full-descript';
 
 @import './layout/header';
 @import './layout/hero';
@@ -21,4 +23,5 @@
 @import './layout/customer-reviews';
 @import './layout/operating-mode';
 @import './layout/contacts';
+@import './components/modal-form';
 @import './layout/footer';
